@@ -14,7 +14,7 @@ public class Utils {
 
     public long factorial(int x) {
         if (x < 0 ) throw new ArithmeticException("Negative number");
-        if (x == 1 | x == 0)
+        if (x == 1 || x == 0)
             return 1;
         return factorial(x - 1) * x;
     }

@@ -30,8 +30,8 @@ public class CalculatePRN {
         return stack.pop();
     }
 
-    public static void print(String expression) {
-
-        System.out.println("\n" + expression + " = " + evalRPN(ConvertInfixToRPN.convertInfixToRPN(expression)));
-    }
+//    public static void print(String expression) {
+//
+//        System.out.println("\n" + expression + " = " + evalRPN(ConvertInfixToRPN.convertInfixToRPN(expression)));
+//    }
 }

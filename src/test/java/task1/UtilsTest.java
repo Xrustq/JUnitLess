@@ -2,24 +2,11 @@ package task1;
 
 import org.junit.*;
 
-import java.util.Random;
 
 
 public class UtilsTest extends Assert {
 
     private Utils utils = new Utils();
-    private Random rand = new Random();
-
-    private int  n;
-    private long c;
-
-    @Before
-    public void init(){
-
-        n = rand.nextInt(20) + 1;
-        c = utils.factorial(n);
-    }
-
 
     @Test
     public void concatenateWords() {
@@ -49,11 +36,10 @@ public class UtilsTest extends Assert {
     @Test
     public void isLatin(){
 
-        assertFalse(utils.concatenateWords("в","п").matches("^[A-Za-z]"));
+        assertFalse(utils.concatenateWords("аб","вг").matches("^[A-Za-z]"));
     }
 
     @Test
-    @Ignore
     public void testComputeFactorial() {
 
         assertEquals(1, utils.factorial(0));
@@ -64,8 +50,8 @@ public class UtilsTest extends Assert {
 
     @Test(timeout=100)
     public void testFactorialWithTimeout() {
-
-        assertEquals(c, utils.factorial(n));
+       while (true)
+        utils.factorial(100);
 
     }
 
